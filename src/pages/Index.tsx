@@ -1,13 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Services from '../components/Services';
+import Portfolio from '../components/Portfolio';
+import Pricing from '../components/Pricing';
+import Testimonials from '../components/Testimonials';
+import FAQ from '../components/FAQ';
+import Contact from '../components/Contact';
 
 const Index = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+    });
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="min-h-screen bg-gray-50"
+    >
+      <Hero />
+      <About />
+      <Services />
+      <Portfolio />
+      <Pricing />
+      <Testimonials />
+      <FAQ />
+      <Contact />
+    </motion.div>
   );
 };
 
