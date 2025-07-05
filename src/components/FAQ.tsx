@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
@@ -31,7 +30,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="faq" className="py-20 bg-white">
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Header */}
         <motion.div

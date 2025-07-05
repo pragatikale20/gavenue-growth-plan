@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -79,7 +78,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-900">
+    <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div
