@@ -17,7 +17,12 @@ const schema = yup.object({
   message: yup.string().required('Message is required'),
 });
 
-type FormData = yup.InferType<typeof schema>;
+type FormData = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
